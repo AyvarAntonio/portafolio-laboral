@@ -1,7 +1,6 @@
-// Ayvarcitoo: asistente del portafolio. Responde al instante con datos reales y, si hay IA configurada, con IA.
 (() => {
     'use strict';
-    const AI_ENDPOINT = '/.netlify/functions/chat'; // función de Netlify con Gemini (vacío = solo respuestas locales)
+    const AI_ENDPOINT = '/.netlify/functions/chat'; // Vacío para usar solo respuestas locales.
     const root = document.documentElement;
     const $ = (s, c = document) => c.querySelector(s);
     const full = () => root.dataset.motion !== 'reduced';
@@ -10,6 +9,7 @@
     const norm = t => t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9+\s]/g, ' ').replace(/\s+/g, ' ').trim();
     const has = (t, k) => k.length <= 3 ? ` ${t} `.includes(` ${k} `) : t.includes(k);
 
+    const age = () => { const t = new Date(); let a = t.getFullYear() - 2005; if (t < new Date(t.getFullYear(), 3, 28)) a--; return a; };
     const WA = 'https://wa.me/51946016559?text=Hola%20Jose%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20contigo.';
     const A = {
         wa: { label: 'WhatsApp', href: WA }, mail: { label: 'Correo', href: 'mailto:joseayvar28@gmail.com' },
@@ -19,7 +19,7 @@
     };
     const sections = [['inicio', 'home'], ['sobre mi', 'about'], ['experiencia', 'experience'], ['stack', 'skills'], ['habilidades', 'skills'], ['proyectos', 'projects'], ['taller', 'playground'], ['editor', 'playground'], ['retos', 'playground'], ['educacion', 'education'], ['estudios', 'education'], ['contacto', 'contact']];
 
-    // Respuestas locales: instantáneas y sin depender de ningún servicio.
+    // Respuestas locales por si la IA falla xd.
     const kb = [
         { k: ['hola', 'buenas', 'hey', 'buenos dias', 'buenas tardes', 'buenas noches', 'saludos'], a: '¡Hola! 👋 Soy <strong>Ayvarcitoo</strong>. Pregúntame lo que quieras sobre Jose, o pídeme que te lleve a una sección.' },
         { k: ['quien eres', 'que eres', 'como te llamas', 'eres un bot', 'eres una ia', 'eres humano', 'ayvarcitoo'], a: 'Soy <strong>Ayvarcitoo</strong>, el asistente virtual del portafolio de Jose. Respondo sobre su experiencia, te guío por la página y explico conceptos de programación.' },
@@ -37,6 +37,9 @@
         { k: ['github', 'linkedin', 'redes', 'repositorio'], a: 'Encuentras a Jose en GitHub y LinkedIn:', act: [A.gh, A.li] },
         { k: ['taller', 'retos', 'editor', 'codigo en vivo', 'como funciona el taller'], a: 'El <strong>taller en vivo</strong> es un mini editor con HTML, CSS y JavaScript, vista previa en tiempo real y 3 retos que se comprueban solos. Yo te guío paso a paso.', act: [A.go('Ir al taller', 'playground')] },
         { k: ['como esta hecho', 'hecho con', 'como lo hizo', 'tecnologias del portafolio', 'esta pagina', 'este portafolio'], a: 'Este portafolio está hecho con <strong>HTML, CSS y JavaScript puros</strong>, sin frameworks: animaciones, terminal, taller de código y yo, todo a mano. Se publica en Netlify.' },
+        { k: ['edad', 'cuantos anos', 'anos tiene', 'que edad', 'nacio', 'cumpleanos', 'fecha de nacimiento', 'cuando naciste'], a: `Jose nació el <strong>28 de abril de 2005</strong> y tiene <strong>${age()} años</strong>. Joven, pero con bastante código a cuestas 😄` },
+        { k: ['novia', 'novio', 'pareja', 'soltero', 'casado', 'esposa', 'enamorado'], a: 'Jose está <strong>casado con su computadora y con la programación</strong> 😄. Su compromiso más serio es con el código.' },
+        { k: ['hobby', 'hobbies', 'pasatiempo', 'pasatiempos', 'le gusta', 'aficion', 'tiempo libre', 'gustos'], a: 'Eso es parte de su misterio 😄. Lo que sí se nota es que lo suyo es <strong>programar y enseñar tecnología</strong>. Si quieres conocerlo mejor, escríbele.', act: [A.wa] },
         { k: ['instalar', 'instalo', 'app', 'aplicacion', 'descargar la pagina', 'pantalla de inicio'], a: 'Este portafolio se puede <strong>instalar como app</strong> y abrir incluso sin conexión. En Android o PC pulsa el botón; en iPhone usa <em>Compartir</em> y luego <em>Añadir a pantalla de inicio</em>.', act: [{ label: 'Instalar app', install: true }] },
         { k: ['gracias', 'genial', 'excelente', 'buenisimo', 'chevere'], a: '¡Con gusto! 😊 Si quieres, pregúntame algo más o escríbele a Jose.' },
         { k: ['chau', 'adios', 'hasta luego', 'nos vemos'], a: '¡Hasta pronto! 👋 Cuando quieras volver, aquí estaré.' },
@@ -57,7 +60,6 @@
     ];
     const FALLBACK = { a: 'Esa pregunta se me escapa 😅. Puedo contarte sobre la <strong>experiencia, tecnologías y estudios</strong> de Jose, o llevarte a una sección. Para otra consulta, escríbele directo.', act: [A.wa] };
 
-    // Interfaz
     const fab = document.createElement('button');
     fab.className = 'ayv-fab';
     fab.type = 'button';
@@ -208,6 +210,6 @@
             sessionStorage.setItem('ayv.tip', '1');
             setTimeout(() => { tip.hidden = true; }, 8000);
         }, 7000);
-    } catch { /* sin guardado */ }
+    } catch { /* Si no se puede guardar, el chat sigue funcionando. */ }
     tip.addEventListener('click', open);
 })();

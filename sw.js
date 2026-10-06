@@ -1,5 +1,4 @@
-// Service worker: la página abre rápido y funciona sin conexión.
-// Estrategia: primero la red (siempre ves la última versión) y, si falla, la copia guardada.
+// Primero intento la red; si falla, uso la copia guardada.
 const CACHE = 'ayvar-v1';
 const CORE = ['/', 'index.html', 'css/style.css', 'css/enhancements.css', 'css/extras.css', 'css/ayvarcitoo.css', 'js/preferences.js', 'js/script.js', 'js/enhancements.js', 'js/extras.js', 'js/ayvarcitoo.js', 'img/yo.jpg', 'img/favicon.ico', 'img/icon-192.png'];
 
@@ -11,7 +10,7 @@ self.addEventListener('activate', e => {
 });
 self.addEventListener('fetch', e => {
     const req = e.request;
-    // Los envíos del formulario y cualquier petición que no sea GET pasan directo a la red.
+    // Solo guardo peticiones GET, no los envíos del formulario.
     if (req.method !== 'GET' || !req.url.startsWith('http')) return;
     e.respondWith(
         fetch(req).then(res => {

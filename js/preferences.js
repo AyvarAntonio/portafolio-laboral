@@ -1,4 +1,4 @@
-// Aplicar las preferencias antes de pintar la página evita destellos de otro tema.
+// Cargo el tema antes de mostrar la página para evitar el parpadeo.
 (() => {
     const root = document.documentElement;
     try {

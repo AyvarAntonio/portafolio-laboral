@@ -1,4 +1,3 @@
-// Mejoras aditivas: no tocan la lógica de script.js. Si algo falla, el portafolio sigue funcionando.
 (() => {
     'use strict';
     const root = document.documentElement;
@@ -8,7 +7,6 @@
     const fine = matchMedia('(hover: hover) and (pointer: fine)');
     const esc = t => String(t).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-    // 1. Arranque: un solo momento de entrada por sesión, se puede saltar con un clic.
     (function boot() {
         try { if (sessionStorage.getItem('portfolio.boot') || !full()) return; sessionStorage.setItem('portfolio.boot', '1'); } catch { if (!full()) return; }
         const lines = ['> iniciando jose-ayvar.dev', '> cargando stack: JavaScript · PHP · React · Node.js', '> conectando interfaz ↔ servidor ↔ datos', '> listo. Bienvenido.'];
@@ -26,7 +24,6 @@
         next();
     })();
 
-    // 2. Títulos de sección con efecto de decodificación al aparecer.
     const glyphs = '01<>/{}[]#$%';
     function decode(el) {
         const text = el.textContent;
@@ -46,7 +43,6 @@
         $$('.section-header .section-subtitle').forEach(el => io.observe(el));
     }
 
-    // 3. Riel lateral de secciones (escritorio ancho).
     const sections = [['home', 'Inicio'], ['about', 'Sobre mí'], ['experience', 'Experiencia'], ['skills', 'Stack'], ['projects', 'Proyectos'], ['playground', 'Taller'], ['education', 'Educación'], ['contact', 'Contacto']];
     const rail = document.createElement('nav');
     rail.className = 'rail';
@@ -60,7 +56,6 @@
         sections.forEach(([id]) => { const s = document.getElementById(id); if (s) spy.observe(s); });
     }
 
-    // 4. Botones magnéticos y tarjetas de proyecto con inclinación 3D (solo con ratón).
     if (fine.matches) {
         $$('.btn, .social-icon').forEach(b => {
             b.addEventListener('pointermove', e => {
@@ -81,7 +76,6 @@
         });
     }
 
-    // 5. Comandos nuevos en la terminal: neofetch y hire.
     const form = $('#terminalForm');
     const input = $('#terminalInput');
     const output = $('#terminalOutput');
@@ -119,7 +113,7 @@
         });
     }
 
-    // 6. GitHub en vivo: repositorios públicos reales. Si falla la red, el bloque no aparece.
+    // Si GitHub no responde, dejo este bloque oculto.
     const gh = $('#githubLive');
     if (gh && 'fetch' in window) {
         fetch('https://api.github.com/users/AyvarAntonio/repos?sort=updated&per_page=6', { headers: { Accept: 'application/vnd.github+json' } })
@@ -135,7 +129,7 @@
     }
 })();
 
-// App instalable: registra el service worker (solo en https) y guarda el aviso de instalación.
+// El registro para usar la página sin conexión requiere HTTPS.
 (() => {
     if ('serviceWorker' in navigator && location.protocol === 'https:') {
         addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
@@ -144,7 +138,6 @@
     addEventListener('appinstalled', () => { window.__pwaPrompt = null; });
 })();
 
-// Botón "Instalar app" siempre disponible (se oculta si ya estás usando la app instalada).
 (() => {
     const btn = document.getElementById('installApp');
     if (!btn) return;

@@ -1,4 +1,3 @@
-// Hero 3D, modo reclutador y taller de código. Aditivo: no modifica script.js.
 (() => {
     'use strict';
     const root = document.documentElement;
@@ -6,7 +5,6 @@
     const $$ = (s, c = document) => [...c.querySelectorAll(s)];
     const full = () => root.dataset.motion !== 'reduced';
 
-    // 1. Detalles tecnológicos: marco HUD en la foto, cinta de tecnologías y línea de tiempo que se enciende al hacer scroll.
     const ws = $('.hero-workspace');
     if (ws) ['tl', 'tr', 'bl', 'br'].forEach(c => { const s = document.createElement('span'); s.className = `hud hud-${c}`; s.setAttribute('aria-hidden', 'true'); ws.append(s); });
     const techs = [['fab fa-js', 'JavaScript'], ['fab fa-react', 'React'], ['fab fa-node-js', 'Node.js'], ['fab fa-php', 'PHP'], ['fas fa-database', 'MySQL'], ['fab fa-python', 'Python'], ['fab fa-java', 'Java'], ['fab fa-html5', 'HTML5'], ['fab fa-css3-alt', 'CSS3'], ['fab fa-angular', 'Angular'], ['fab fa-aws', 'AWS'], ['fab fa-docker', 'Docker'], ['fab fa-git-alt', 'Git'], ['fab fa-github', 'GitHub']];
@@ -29,7 +27,7 @@
         upd();
     }
 
-    // Rendimiento: pausa el lienzo mientras haces scroll y las animaciones que no se ven.
+    // Pauso lo que no se ve para no cargar tanto el navegador.
     let scrollTimer;
     addEventListener('scroll', () => {
         root.classList.add('is-scrolling');
@@ -41,7 +39,6 @@
         [$('.hero-section'), $('.marquee')].filter(Boolean).forEach(n => off.observe(n));
     }
 
-    // 2. Taller IDE: tres archivos con color de sintaxis, vista previa en vivo, consola y retos que se comprueban solos.
     const ide = $('#ide');
     if (!ide) return;
     const base = 'body{margin:0;background:#0d1112;color:#eef0ec;font-family:system-ui,sans-serif}';
@@ -51,7 +48,7 @@
           check: "getComputedStyle(document.querySelector('h1')).color==='rgb(196, 245, 104)'",
           files: { html: '<main>\n  <h1>Hola, soy desarrollador</h1>\n  <p>Cambia el color de este título.</p>\n</main>',
                    css: 'body {\n  margin: 0;\n  min-height: 100vh;\n  display: grid;\n  place-content: center;\n  text-align: center;\n  font-family: system-ui, sans-serif;\n  background: #0d1112;\n  color: #eef0ec;\n}\n\nh1 {\n  color: white;\n  font-size: 2rem;\n}\n',
-                   js: "// Este reto es solo de CSS.\nconsole.log('Listo para empezar 🚀');\n" } },
+                   js: "// Este reto es solo de CSS.\nconsole.log('Listo para empezar ');\n" } },
         { title: 'Haz que el botón cuente', file: 'js', task: 'En script.js, haz que cada clic en el botón sume 1 y lo muestre en #n.', hint: 'btn.addEventListener("click", () => { clics++; n.textContent = clics; });',
           check: "(()=>{const n=document.getElementById('n'),a=n.textContent;document.getElementById('btn').click();return n.textContent!==a})()",
           files: { html: '<button id="btn">Sumar</button>\n<p>Clics: <strong id="n">0</strong></p>',
@@ -63,7 +60,6 @@
                    css: gridBody + '.grid {\n  gap: 12px;\n}\n\n.grid div {\n  padding: 28px 10px;\n  border-radius: 10px;\n  background: #171b1c;\n  border: 1px solid #ffffff1f;\n  text-align: center;\n}\n',
                    js: "// Este reto es solo de CSS.\n" } }
     ];
-    // Contenido didáctico de cada reto.
     Object.assign(retos[0], {
         steps: [
             { say: '¡Hola! Soy <strong>Ayvarcitoo</strong>, tu guía. En CSS cada regla tiene un <strong>selector</strong> (a quién), una <strong>propiedad</strong> (qué cambia) y un <strong>valor</strong> (cómo). Por ejemplo: <code>h1 { color: red; }</code>' },
@@ -214,7 +210,6 @@
             } else say('Todavía no. Revisa la pista si te atascas.', 'pending');
         }
     });
-    // Byte: el asistente que explica cada paso.
     const botText = $('#ideBotText'), botNext = $('#ideBotNext'), botPrev = $('#ideBotPrev'), botAct = $('#ideBotAct');
     const bot = {
         i: 0, won: false, timer: 0,
@@ -252,7 +247,6 @@
         if (cur === retos.length - 1) $('a[href="#contact"]')?.click(); else { cur++; file = retos[cur].file; load(); }
     });
 
-    // Tour guiado con ventanas emergentes sobre cada parte del editor.
     const tourSteps = [
         ['.ide-tabs', 'Estos son los archivos del proyecto. HTML da la estructura, CSS el estilo y JavaScript el comportamiento.'],
         ['.ide-code', 'Aquí escribes. Los colores distinguen etiquetas, textos y números. Con Tab sangras y con Enter se mantiene la sangría.'],
@@ -318,4 +312,3 @@
     });
     load();
 })();
-

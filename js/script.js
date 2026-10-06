@@ -11,7 +11,7 @@
     const emailAddress = 'joseayvar28@gmail.com';
     const storage = {
         get(key) { try { return localStorage.getItem(`portfolio.${key}`); } catch { return null; } },
-        set(key, value) { try { localStorage.setItem(`portfolio.${key}`, value); } catch { /* Las preferencias siguen funcionando en esta visita. */ } }
+        set(key, value) { try { localStorage.setItem(`portfolio.${key}`, value); } catch { /* Si no puedo guardar, las preferencias duran esta visita. */ } }
     };
 
     let toastTimer;
@@ -23,7 +23,6 @@
         toastTimer = setTimeout(() => region.classList.remove('is-visible'), 4000);
     }
 
-    // Tema, acento y movimiento se comparten entre todos los controles.
     const themeToggle = $('#themeToggle');
     const motionToggle = $('#motionToggle');
     let motionPaused = storage.get('motion') === 'paused';
@@ -84,7 +83,6 @@
     updateAppearance();
     updateMotion();
 
-    // Etiquetas accesibles para los enlaces sociales originales.
     const socialNames = { 'fa-instagram': 'Instagram', 'fa-linkedin-in': 'LinkedIn', 'fa-github': 'GitHub', 'fa-tiktok': 'TikTok', 'fa-envelope': 'Enviar correo' };
     $$('.social-icon').forEach(link => {
         const icon = $('i', link);
@@ -97,7 +95,6 @@
     });
     $$('a[target="_blank"]').forEach(link => { link.rel = 'noopener noreferrer'; });
 
-    // Navegación móvil sin dependencias externas.
     const navbar = $('.navbar');
     const navToggle = $('.navbar-toggler');
     const navMenu = $('#navbarNav');
@@ -136,7 +133,7 @@
         target.scrollIntoView({ behavior: motionEnabled() ? 'smooth' : 'instant', block: 'start' });
         if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
         target.focus({ preventScroll: true });
-        try { history.replaceState(null, '', `#${target.id}`); } catch { /* También admite abrir index.html directamente. */ }
+        try { history.replaceState(null, '', `#${target.id}`); } catch { /* Puede fallar al abrir el archivo directamente. */ }
     }
 
     document.addEventListener('click', event => {
@@ -179,7 +176,6 @@
     setInterval(updateClock, 60000);
     document.addEventListener('visibilitychange', updateClock);
 
-    // Texto rotativo con espacio reservado; se detiene al pausar o salir de la pestaña.
     const roles = ['Full Stack Developer', 'Ingeniero de Software Jr', 'Innovador Tecnológico'];
     const typed = $('#typed');
     let typeTimer;
@@ -214,7 +210,6 @@
     document.addEventListener('visibilitychange', syncTyping);
     syncTyping();
 
-    // Aparición progresiva y métricas: un único observador por tipo, una sola ejecución.
     function observeOnce(elements, callback, options = {}) {
         if (!('IntersectionObserver' in window)) { elements.forEach(callback); return; }
         const observer = new IntersectionObserver(entries => {
@@ -261,7 +256,6 @@
         animateNumber(Number(circle.dataset.percent), value => circle.style.setProperty('--percent', value.toFixed(1)));
     });
 
-    // Luz al pasar el puntero y una inclinación sutil en la fotografía.
     const cards = $$('.certificate-card, .skill-category-card, .education-card, .timeline-content, .project-card, .contact-form-container');
     cards.forEach(card => card.classList.add('spotlight-card'));
     [...cards, ...$$('[data-tilt]')].forEach(card => {
@@ -315,7 +309,7 @@
         setTimeout(() => ripple.remove(), 600);
     });
 
-    // Los filtros y la búsqueda comparten estado para evitar carreras al alternar rápido.
+    // Comparto el estado de búsqueda y filtros para que no se descoordinen.
     const projectItems = $$('.project-grid > [data-category]');
     const projectSearch = $('#projectSearch');
     let activeFilter = 'all';
@@ -353,7 +347,7 @@
         projectSearch.focus({ preventScroll: true });
     });
 
-    // Laboratorio Full Stack: explica el flujo con una simulación visual local.
+    // Esto simula el flujo completo, no hace peticiones a un servidor.
     const lab = $('#architectureLab');
     const runFlow = $('#runFlow');
     const flowLog = $('#flowLog');
@@ -421,7 +415,6 @@
     });
     document.addEventListener('portfolio:motion', () => { if (flowRunning && !motionEnabled()) finishFlow(); });
 
-    // Dialogs nativos: teclado, foco, Escape y cierre al pulsar el fondo.
     function openDialog(dialog) {
         $$('dialog[open]').forEach(open => open.close());
         dialog.showModal();
@@ -484,7 +477,7 @@
                 await navigator.clipboard.writeText(emailAddress);
                 copied = true;
             }
-        } catch { /* Alternativa para navegadores que bloquean Clipboard API. */ }
+        } catch { /* Si el navegador bloquea el portapapeles, pruebo la alternativa de abajo. */ }
         if (!copied) {
             const previous = document.activeElement;
             const field = document.createElement('textarea');
@@ -501,7 +494,6 @@
     }
     $$('[data-copy-email]').forEach(button => button.addEventListener('click', copyEmail));
 
-    // Command palette: todos los resultados son acciones reales del portafolio.
     const commandDialog = $('#commandDialog');
     const commandSearch = $('#commandSearch');
     const commandResults = $('#commandResults');
@@ -586,7 +578,7 @@
         }
     });
 
-    // Terminal acotada a comandos locales; nunca ejecuta JavaScript introducido por el visitante.
+    // Solo acepto los comandos de aquí, no ejecuto código del visitante.
     const terminalInput = $('#terminalInput');
     const terminalOutput = $('#terminalOutput');
     const terminalHistory = [];
@@ -643,7 +635,7 @@
         terminalInput.setSelectionRange(terminalInput.value.length, terminalInput.value.length);
     });
 
-    // El formulario se envía con Netlify Forms y se informa el resultado real del envío.
+    // Muestro éxito solo cuando Netlify confirma el envío.
     const contactForm = $('#contactForm');
     const formFields = ['name', 'email', 'subject', 'message'].map(id => document.getElementById(id));
     const formStatus = $('#formStatus');
@@ -750,8 +742,7 @@
         }
     });
 
-    // Fondo ambiental de toda la página. Un solo lienzo, limitado a 30 fps,
-    // que se detiene al pausar las animaciones o al ocultar la pestaña.
+    // Limito el fondo a 30 fps y lo pauso si la pestaña está oculta.
     const canvas = $('#networkCanvas');
     const context = canvas.getContext('2d');
     if (!context) return;

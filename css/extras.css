@@ -1,4 +1,3 @@
-/* Marco HUD, cinta de tecnologías, timeline, taller IDE y guía */
 @property --beam { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
 .profile-window::before { content: ''; position: absolute; inset: -2px; padding: 2px; border-radius: 15px; pointer-events: none; background: conic-gradient(from var(--beam), transparent 0 60%, var(--accent)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude; animation: beam 5s linear infinite; }
 @keyframes beam { to { --beam: 360deg; } }
@@ -121,7 +120,6 @@
 .tour-nav { display: flex; align-items: center; gap: 6px; }
 .tour-count { flex: 1; font: 10px var(--mono); color: #7f8c83; }
 
-/* Logos de estudios: banner centrado y giro de moneda como el GIF original */
 .education-banner { display: flex; align-items: center; justify-content: center; height: 118px; margin: -30px -30px 26px; border-bottom: 1px solid var(--border); border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0; background: radial-gradient(circle at 50% 120%, #e4ead9, transparent 70%), linear-gradient(180deg, #fff, #f1f4ee); overflow: hidden; }
 .education-banner img { display: block; width: auto; max-width: 80%; object-fit: contain; animation: logo-spin 8s ease-in-out infinite; }
 .education-banner.is-trentino img { height: 80px; }
@@ -135,7 +133,7 @@
     .education-banner.is-utp img { height: 42px; }
 }
 
-/* Rendimiento: las mismas animaciones, con menos trabajo para el navegador */
+/* Menos trabajo para el navegador al animar. */
 .navbar, .experience-controls { -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
 .ambient-grid, .ambient-light, .marquee-track { will-change: transform; }
 .is-offscreen, .is-offscreen *, .is-offscreen::before, .is-offscreen::after, .is-offscreen *::before, .is-offscreen *::after { animation-play-state: paused !important; }

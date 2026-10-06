@@ -1,4 +1,3 @@
-/* Mejoras aditivas del portafolio */
 .boot { position: fixed; inset: 0; z-index: 3000; display: grid; place-content: center; background: var(--bg); color: var(--primary-color); font: 12px/2.1 var(--mono); transition: opacity .45s; cursor: pointer; padding: 24px; }
 .boot pre { margin: 0; font: inherit; white-space: pre-wrap; }
 .boot pre::after { content: '▌'; animation: blink 1s step-end infinite; }
