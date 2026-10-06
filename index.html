@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-accent="lime">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080a0b">
+    <meta name="author" content="Jose Ayvar">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://portfolio-laboral-ayvar.netlify.app/">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Jose Ayvar">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Jose Ayvar | Ingeniero de Software Jr | Full Stack Developer</title>
+    <meta name="description"
+        content="Portafolio profesional de Jose Ayvar, Ingeniero de Software Jr con experiencia en desarrollo Full Stack, diseño UI/UX y soluciones tecnológicas innovadoras">
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jose Ayvar | Ingeniero de Software Jr">
+    <meta property="og:description"
+        content="Desarrollador Full Stack con experiencia en JavaScript, PHP, MySQL, React, Node.js y más">
+    <meta property="og:site_name" content="Jose Ayvar">
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:url" content="https://portfolio-laboral-ayvar.netlify.app/">
+    <meta property="og:image" content="https://portfolio-laboral-ayvar.netlify.app/img/og-image.jpg?v=2">
+    <meta property="og:image:secure_url" content="https://portfolio-laboral-ayvar.netlify.app/img/og-image.jpg?v=2">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Jose Ayvar, Ingeniero de Software Jr y desarrollador Full Stack">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jose Ayvar | Ingeniero de Software Jr">
+    <meta name="twitter:description" content="Desarrollador Full Stack con experiencia en JavaScript, PHP, MySQL, React y Node.js. Docente de informática y programación.">
+    <meta name="twitter:image" content="https://portfolio-laboral-ayvar.netlify.app/img/og-image.jpg?v=2">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="js/preferences.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/enhancements.css">
+    <link rel="stylesheet" href="css/extras.css">
+    <link rel="stylesheet" href="css/ayvarcitoo.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Jose Ayvar", "url": "https://portfolio-laboral-ayvar.netlify.app/", "image": "https://portfolio-laboral-ayvar.netlify.app/img/yo.jpg", "jobTitle": "Ingeniero de Software Jr", "description": "Desarrollador Full Stack y docente de informática, robótica y programación.", "address": {"@type": "PostalAddress", "addressLocality": "Lima", "addressCountry": "PE"}, "sameAs": ["https://github.com/AyvarAntonio", "https://www.linkedin.com/in/jose-ayvar-82a980398"], "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Universidad Tecnológica del Perú (UTP)"}, {"@type": "EducationalOrganization", "name": "IESTP Trentino Juan Pablo II"}], "knowsAbout": ["JavaScript", "PHP", "Node.js", "React", "MySQL", "Desarrollo web Full Stack", "Docencia de programación"]}</script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <div class="scroll-progress" aria-hidden="true"><div id="scrollProgress"></div></div>
+    <div class="cursor-halo" aria-hidden="true"></div>
+    <div class="ambient-background" aria-hidden="true">
+        <div class="ambient-grid"></div>
+        <div class="ambient-light ambient-light-one"></div>
+        <div class="ambient-light ambient-light-two"></div>
+        <div class="ambient-light ambient-light-three"></div>
+        <canvas id="networkCanvas"></canvas>
+        <div class="ambient-vignette"></div>
+    </div>
+
+    <!-- Mi Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand logo" href="#home" aria-label="Jose Ayvar, inicio">
+                <span class="logo-mark">j<span>a</span><span class="logo-dot">.</span></span>
+                <span class="logo-caption">JOSE AYVAR<span>DEVELOPER</span></span>
+            </a>
+            <button class="navbar-toggler" type="button"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            Sobre mí
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">
+                            Experiencia
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">
+                            Stack
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">
+                            Proyectos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">
+                            Educación
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            Contacto <i class="fas fa-arrow-up-right-from-square nav-arrow" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav-tools">
+                    <button class="command-trigger" type="button" data-open-command aria-label="Abrir navegación rápida, Control K" aria-haspopup="dialog">
+                        <i class="fas fa-magnifying-glass" aria-hidden="true"></i><kbd>Ctrl K</kbd>
+                    </button>
+                    <button class="icon-button" type="button" id="themeToggle" aria-label="Activar modo claro" title="Activar modo claro">
+                        <i class="fas fa-sun" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+    <!-- Portada / espacio de trabajo -->
+    <section id="home" class="hero-section">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="container">
+            <div class="hero-topline"><span>PORTAFOLIO PERSONAL / 2026</span><span><i class="fas fa-location-dot" aria-hidden="true"></i> LIMA, PERÚ <span class="local-time" id="localTime"></span></span></div>
+            <div class="row align-items-center hero-layout">
+                <div class="col-lg-7">
+                    <div class="hero-content">
+                        <a class="availability" href="#contact"><span class="status-dot"></span> Disponible para nuevos proyectos <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <p class="hero-intro">Hola, soy Jose Ayvar <span class="wave-hand" aria-hidden="true">✳</span></p>
+                        <h1 class="hero-title">Transformo ideas<br>en <span class="hero-accent">experiencias<br>digitales<span class="title-period">.</span></span></h1>
+                        <div class="hero-role"><span class="code-bracket" aria-hidden="true">&lt;</span> <span id="typed" aria-hidden="true">Full Stack Developer</span><span class="type-caret" aria-hidden="true">_</span><span class="code-bracket" aria-hidden="true"> /&gt;</span><span class="visually-hidden">Ingeniero de Software Jr y desarrollador Full Stack</span></div>
+                        <p class="hero-text">Código con propósito. Diseño con intención. Desarrollo soluciones web con JavaScript, PHP, React y Node.js que conectan ideas con personas.</p>
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary">Explorar proyectos <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="docs/CV-Jose-Ayvar.pdf" class="btn btn-outline-primary" id="downloadCV" download="CV-Jose-Ayvar.pdf">Descargar CV <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="hero-social-row">
+                            <span>ENCUÉNTRAME EN</span>
+                            <div class="social-icons">
+                                <a href="https://github.com/AyvarAntonio" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                                <a href="https://www.linkedin.com/in/jose-ayvar-82a980398" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/ayvxrcitooo/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                <a href="https://www.tiktok.com/@ayvxrcitooo" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok" title="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+                                <a href="https://wa.me/51946016559?text=Hola%20Jose%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20contigo." target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                                <a href="mailto:joseayvar28@gmail.com" class="social-icon" aria-label="Enviar correo" title="Enviar correo"><i class="far fa-envelope" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="hero-workspace" data-aos="fade-up">
+                        <div class="orbit orbit-one" aria-hidden="true"></div>
+                        <div class="orbit orbit-two" aria-hidden="true"></div>
+                        <div class="profile-window" data-tilt>
+                            <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>jose-ayvar / profile.tsx</span><i class="fas fa-code" aria-hidden="true"></i></div>
+                            <div class="profile-portrait">
+                                <img src="img/yo.jpg" alt="Retrato de Jose Ayvar, desarrollador Full Stack" class="hero-image" width="640" height="641" fetchpriority="high">
+                                <span class="portrait-label"><span class="status-dot"></span> OPEN TO WORK</span>
+                                <div class="portrait-caption"><span>DETRÁS DEL CÓDIGO</span><h2>Jose Ayvar<span>.</span></h2><p>Ingeniero de Software Jr</p></div>
+                            </div>
+                            <div class="profile-status"><span><i class="fas fa-code-branch" aria-hidden="true"></i> main</span><span><span class="status-dot"></span> Siempre aprendiendo</span></div>
+                        </div>
+                        <a class="floating-tech tech-react" href="#skills" aria-label="Explorar habilidades en React"><i class="fab fa-react" aria-hidden="true"></i><span>React</span></a>
+                        <a class="floating-tech tech-js" href="#skills" aria-label="Explorar habilidades en JavaScript"><i class="fab fa-js" aria-hidden="true"></i></a>
+                        <div class="code-note">
+                            <div><span class="code-violet">const</span> developer <span class="code-violet">=</span> {</div>
+                            <div>&nbsp; mindset: <span class="code-lime">"never stop building"</span>,</div>
+                            <div>&nbsp; coffee: <span class="code-cyan">true</span></div>
+                            <div>};<span class="note-cursor" aria-hidden="true">▌</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-bottom">
+                <div class="hero-stats">
+                    <div class="stat-item"><strong class="stat-number" data-count="15">15+</strong><span class="stat-label">Proyectos realizados</span></div>
+                    <div class="stat-item"><strong class="stat-number" data-count="3">3+</strong><span class="stat-label">Años de experiencia</span></div>
+                    <div class="stat-item"><strong class="stat-number" data-count="10">10+</strong><span class="stat-label">Clientes</span></div>
+                </div>
+                <a href="#about" class="scroll-down"><span>EXPLORA MI UNIVERSO</span><i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="stack-strip" aria-label="Tecnologías principales">
+        <div class="container stack-strip-inner"><span class="stack-strip-label">MI KIT DE CREACIÓN <i class="fas fa-arrow-right" aria-hidden="true"></i></span><a href="#skills"><i class="fab fa-js" aria-hidden="true"></i> JavaScript</a><a href="#skills"><i class="fab fa-react" aria-hidden="true"></i> React</a><a href="#skills"><i class="fab fa-node-js" aria-hidden="true"></i> Node.js</a><a href="#skills"><i class="fab fa-php" aria-hidden="true"></i> PHP</a><a href="#skills"><i class="fas fa-database" aria-hidden="true"></i> MySQL</a><a href="#skills"><i class="fab fa-python" aria-hidden="true"></i> Python</a></div>
+    </div>
+
+    <!-- Seccion sobre mí -->
+    <section id="about" class="about-section section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h6 class="section-subtitle">01 / Un poco sobre mí</h6>
+                <h2 class="section-title">Curiosidad que se convierte<br>en <span class="text-primary">soluciones.</span></h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="terminal-panel" aria-label="Terminal interactiva del portafolio">
+                        <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>jose@portfolio: ~</span><i class="fas fa-terminal" aria-hidden="true"></i></div>
+                        <div class="terminal-body">
+                            <p class="terminal-welcome"><span class="code-lime">¡Bienvenido a mi espacio de trabajo!</span><br>Una forma diferente de conocerme.</p>
+                            <div class="terminal-output" id="terminalOutput" role="log" aria-live="polite" aria-relevant="additions" tabindex="0" aria-label="Resultados de la terminal">
+                                <div class="terminal-entry"><span class="terminal-prompt">jose@portfolio ~ $</span> whoami<p>Jose Ayvar · Ingeniero de Software Jr<br>Desarrollador Full Stack, docente y curioso por naturaleza.<br><span class="terminal-muted">Escribe help para ver los comandos disponibles.</span></p></div>
+                            </div>
+                            <form class="terminal-form" id="terminalForm">
+                                <label for="terminalInput" class="terminal-prompt"><span aria-hidden="true">❯</span><span class="visually-hidden">Escribe un comando</span></label>
+                                <input id="terminalInput" type="text" placeholder="Prueba: help" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="100" aria-describedby="terminalHint">
+                                <button type="submit" class="icon-button" aria-label="Ejecutar comando"><i class="fas fa-arrow-turn-down" aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                        <div class="terminal-shortcuts" id="terminalHint"><span>PRUEBA</span><button type="button" data-command="help">help</button><button type="button" data-command="skills">skills</button><button type="button" data-command="projects">projects</button><button type="button" data-command="contact">contact</button></div>
+                    </div>
+                    <div class="about-note"><i class="fas fa-lightbulb" aria-hidden="true"></i><p>Aprender. Crear. Compartir.<br><span>La tecnología tiene sentido cuando ayuda a alguien.</span></p></div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                    <div class="about-content ps-lg-5">
+                        <h3 class="mb-4">Ingeniero de Software Jr con pasión por la innovación</h3>
+                        <p class="lead mb-4">
+                            Desarrollador Full Stack con sólidos conocimientos en tecnologías web modernas y experiencia
+                            en la creación de soluciones digitales eficientes y escalables.
+                        </p>
+
+                        <div class="personal-info">
+                            <div class="row">
+                                <div class="col-sm-6 mb-3">
+                                    <div class="info-item">
+                                        <span class="info-label">
+                                            <i class="fas fa-user me-2"></i>Nombre:
+                                        </span>
+                                        <span class="info-value">Jose Ayvar</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <div class="info-item">
+                                        <span class="info-label">
+                                            <i class="fas fa-calendar me-2"></i>Edad:
+                                        </span>
+                                        <span class="info-value">21 años</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <div class="info-item">
+                                        <span class="info-label">
+                                            <i class="fas fa-map-marker-alt me-2"></i>Ubicación:
+                                        </span>
+                                        <span class="info-value">Pachacamac Perú</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <div class="info-item">
+                                        <span class="info-label">
+                                            <i class="fas fa-envelope me-2"></i>Email:
+                                        </span>
+                                        <span class="info-value">joseayvar28@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <div class="info-item">
+                                        <span class="info-label">
+                                            <i class="fas fa-phone me-2"></i>Teléfono:
+                                        </span>
+                                        <span class="info-value">+51 946 016 559</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <div class="info-item">
+                                        <span class="info-label">
+                                            <i class="fas fa-briefcase me-2"></i>Disponibilidad:
+                                        </span>
+                                        <span class="info-value text-success">
+                                            <i class="fas fa-circle me-1"></i>Disponible
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="interests mt-4">
+                            <h5 class="mb-3">Mis Intereses</h5>
+                            <div class="interest-tags">
+                                <span class="interest-tag">💻 Desarrollo Web</span>
+                                <span class="interest-tag">📱 Apps Móviles</span>
+                                <span class="interest-tag">🎨 UI/UX Design</span>
+                                <span class="interest-tag">📊 Bases de Datos</span>
+                                <span class="interest-tag">☁️ Cloud Computing</span>
+                                <span class="interest-tag">🤖 Inteligencia Artificial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificados -->
+            <div class="certificates mt-5" data-aos="fade-up">
+                <h3 class="text-center mb-4">Certificaciones</h3>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="certificate-card">
+                            <div class="certificate-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="certificate-content">
+                                <h5>Python Basic</h5>
+                                <p>Fundamentos de Python: variables, estructuras de control y funciones.</p>
+                                <span class="certificate-date">
+                                    <i class="far fa-calendar me-1"></i> 2023
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="certificate-card">
+                            <div class="certificate-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="certificate-content">
+                                <h5>Java - Curso Técnico</h5>
+                                <p>Programación orientada a objetos, manejo de APIs y desarrollo de aplicaciones.</p>
+                                <span class="certificate-date">
+                                    <i class="far fa-calendar me-1"></i> 2023
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion de la experiencia ps-->
+    <section id="experience" class="experience-section section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h6 class="section-subtitle">02 / El camino recorrido</h6>
+                <h2 class="section-title">Experiencia que<br>marca <span class="text-primary">la diferencia.</span></h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
+            <div class="timeline" data-aos="fade-up">
+            <!-- Experiencia freelance -->
+            <div class="timeline-item">
+                <div class="timeline-date">01/2026 – actualidad</div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h4>Desarrollador Web Freelance</h4> <span class="timeline-company">Proyectos
+                            Independientes</span> <span class="timeline-location">Lima, Perú</span>
+                    </div>
+                    <p> Desarrollo de sitios web, páginas web y sistemas personalizados para negocios y emprendimientos,
+                        adaptados a sus necesidades y requerimientos. Diseño y desarrollo de soluciones digitales
+                        funcionales, modernas y orientadas a mejorar la gestión, presencia y procesos de cada negocio.
+                    </p>
+                    <div class="timeline-skills"> <span class="skill-tag">Desarrollo Web</span> <span
+                            class="skill-tag">HTML</span> <span class="skill-tag">CSS</span> <span
+                            class="skill-tag">JavaScript</span> <span class="skill-tag">PHP</span> <span
+                            class="skill-tag">MySQL</span> <span class="skill-tag">Sistemas Web</span> <span
+                            class="skill-tag">Diseño Web</span> <span class="skill-tag">Desarrollo Freelance</span>
+                    </div>
+                </div>
+                <div class="timeline-icon"> <i class="fas fa-globe"></i> </div>
+            </div>
+
+                <!-- Experiencia 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">01/2026 – actualidad</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4>Docente de Informática, Robótica y Programación</h4> <span
+                                class="timeline-company">Colegio San Miguel Emprendedor</span> <span
+                                class="timeline-location">El Agustino, Perú</span>
+                        </div>
+                        <p> Docente de Informática desde 1.º de Primaria hasta 5.º de Secundaria y Academia,
+                            desarrollando
+                            competencias digitales, pensamiento computacional y programación mediante proyectos
+                            prácticos adaptados al nivel de los estudiantes. Manejo de herramientas informáticas,
+                            programación web con HTML, CSS y JavaScript, Roblox Studio con Luau, Arduino, robótica y
+                            electrónica básica. </p>
+                        <div class="timeline-skills"> <span class="skill-tag">Informática</span> <span
+                                class="skill-tag">Programación</span> <span class="skill-tag">HTML</span> <span
+                                class="skill-tag">CSS</span> <span class="skill-tag">JavaScript</span> <span
+                                class="skill-tag">Roblox Studio</span> <span class="skill-tag">Luau</span> <span
+                                class="skill-tag">Arduino</span> <span class="skill-tag">Robótica</span> <span
+                                class="skill-tag">Electrónica</span> <span class="skill-tag">Pensamiento
+                                Computacional</span> <span class="skill-tag">Enseñanza</span> </div>
+                    </div>
+                    <div class="timeline-icon"> <i class="fas fa-laptop-code"></i> </div>
+                </div>
+
+                <!-- Experiencia 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">01/2026 – actualidad</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4>Desarrollador de Sistema de Ventas (Apoyo Técnico)</h4>
+                            <span class="timeline-company">Negociaciones Cedro Distribuidora de Cervezas y
+                                Gaseosas</span>
+                            <span class="timeline-location">Pachacamac, Perú</span>
+                        </div>
+                        <p>Colaboré en el desarrollo de un sistema de ventas local para un negocio de bebidas al por
+                            mayor, brindando apoyo en la programación con Java en NetBeans, la generación de reportes
+                            con Jaspersoft y la integración de JPOS para el manejo de la etiquetera. El sistema permitió
+                            optimizar el registro de ventas y el control de la información del negocio.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">NetBeans</span>
+                            <span class="skill-tag">Jaspersoft</span>
+                            <span class="skill-tag">JPOS</span>
+                            <span class="skill-tag">Sistemas de Ventas</span>
+                            <span class="skill-tag">Reportes</span>
+                        </div>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+
+                <!-- Experiencia 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">09/2025 – 12/2025</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4>Operador de BPO y Digitalización</h4>
+                            <span class="timeline-company">Polysistemas</span>
+                            <span class="timeline-location">Pachacamac, Perú</span>
+                        </div>
+                        <p>Apoyo en digitalización y gestión documental, control de calidad, registro de información y
+                            soporte técnico básico.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Digitalización</span>
+                            <span class="skill-tag">Gestión Documental</span>
+                            <span class="skill-tag">Control de Calidad</span>
+                            <span class="skill-tag">Soporte Técnico</span>
+                        </div>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                </div>
+
+                <!-- Experiencia 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">05/2024 – 07/2025</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4>Profesor Auxiliar de Informática</h4>
+                            <span class="timeline-company">IE 7102 San Francisco de Asís</span>
+                            <span class="timeline-location">Pachacamac, Perú</span>
+                        </div>
+                        <p>Apoyo en dictado de clases, demostraciones prácticas, asistencia personalizada y
+                            mantenimiento de equipos.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Enseñanza</span>
+                            <span class="skill-tag">Soporte Técnico</span>
+                            <span class="skill-tag">Mantenimiento</span>
+                            <span class="skill-tag">Capacitación</span>
+                        </div>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                </div>
+
+                <!-- Experiencia 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">12/2022 – 06/2023</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h4>Vendedor de Servicios</h4>
+                            <span class="timeline-company">Movistar Empresas Perú</span>
+                            <span class="timeline-location">Villa El Salvador, Perú</span>
+                        </div>
+                        <p>Atención a clientes corporativos, venta de servicios empresariales y soporte postventa.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Ventas</span>
+                            <span class="skill-tag">Atención al Cliente</span>
+                            <span class="skill-tag">Servicios Empresariales</span>
+                            <span class="skill-tag">Soporte Postventa</span>
+                        </div>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion de habilidades  xd-->
+    <section id="skills" class="skills-section section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h6 class="section-subtitle">03 / Mi ecosistema tecnológico</h6>
+                <h2 class="section-title">Las herramientas.<br><span class="text-primary">Las posibilidades.</span></h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="section-description mt-3">Del primer píxel a la última consulta. Un stack para construir de principio a fin.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Frontend -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h4>Frontend</h4>
+                        </div>
+                        <div class="skill-category-body">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 / CSS3</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript ES6+</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React.js</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Angular</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h4>Backend</h4>
+                        </div>
+                        <div class="skill-category-body">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js / Express</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">PHP</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Java Spring Boot</span>
+                                    <span class="skill-percent">70%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bases de Datos y DevOps -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h4>DB & DevOps</h4>
+                        </div>
+                        <div class="skill-category-body">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MySQL / PostgreSQL</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MongoDB</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">AWS Services</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Docker / Git</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="progress-bar" data-width="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="architecture-lab" id="architectureLab" data-aos="fade-up">
+                <div class="lab-intro">
+                    <span class="section-subtitle"><span class="status-dot" aria-hidden="true"></span> LIVE LAB / INTERACTIVO</span>
+                    <h3>Del clic<br>al <span class="text-primary">dato.</span></h3>
+                    <p>Así se conectan las piezas de una aplicación Full Stack. Toca cada capa o sigue el recorrido de una solicitud.</p>
+                    <button type="button" class="btn btn-outline-primary" id="runFlow"><i class="fas fa-play" aria-hidden="true"></i><span>Simular solicitud</span></button>
+                    <span class="lab-disclaimer">Simulación visual · sin llamadas externas</span>
+                </div>
+                <div class="lab-workspace">
+                    <div class="lab-toolbar"><span><i class="fas fa-code-branch" aria-hidden="true"></i> architecture / full-stack</span><span class="lab-status" id="labStatus">LISTO PARA EXPLORAR</span></div>
+                    <div class="flow-nodes" role="group" aria-label="Explorar capas de la arquitectura">
+                        <button type="button" class="flow-node is-selected" data-layer="frontend" aria-pressed="true" aria-controls="layerDetail"><span class="flow-step">01</span><i class="fas fa-laptop-code" aria-hidden="true"></i><strong>Interfaz</strong><small>React · JavaScript</small></button>
+                        <span class="flow-connector" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                        <button type="button" class="flow-node" data-layer="backend" aria-pressed="false" aria-controls="layerDetail"><span class="flow-step">02</span><i class="fas fa-server" aria-hidden="true"></i><strong>Servidor</strong><small>Node.js · PHP</small></button>
+                        <span class="flow-connector" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                        <button type="button" class="flow-node" data-layer="database" aria-pressed="false" aria-controls="layerDetail"><span class="flow-step">03</span><i class="fas fa-database" aria-hidden="true"></i><strong>Datos</strong><small>MySQL · MongoDB</small></button>
+                    </div>
+                    <div class="layer-detail" id="layerDetail" aria-live="polite"><h4 id="layerTitle">La experiencia comienza aquí.</h4><p id="layerDescription">Interfaces adaptables e interactivas que convierten las acciones del usuario en solicitudes al servidor.</p></div>
+                    <div class="flow-console" id="flowLog" role="status"><span class="terminal-prompt" aria-hidden="true">❯</span> Sistema listo. Explora una capa o inicia la simulación.</div>
+                </div>
+            </div>
+
+            <!-- Lenguajes de ProgramaciON -->  
+            <div class="programming-languages mt-5" data-aos="fade-up">
+                <h4 class="text-center mb-4">Lenguajes de Programación</h4>
+                <div class="language-charts">
+                    <div class="language-chart" data-aos="zoom-in">
+                        <div class="chart-circle" data-percent="90">
+                            <span class="chart-value">90%</span>
+                        </div>
+                        <h5>JavaScript</h5>
+                    </div>
+                    <div class="language-chart" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="chart-circle" data-percent="90">
+                            <span class="chart-value">90%</span>
+                        </div>
+                        <h5>PHP</h5>
+                    </div>
+                    <div class="language-chart" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="chart-circle" data-percent="85">
+                            <span class="chart-value">85%</span>
+                        </div>
+                        <h5>Python</h5>
+                    </div>
+                    <div class="language-chart" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="chart-circle" data-percent="80">
+                            <span class="chart-value">80%</span>
+                        </div>
+                        <h5>Java</h5>
+                    </div>
+                    <div class="language-chart" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="chart-circle" data-percent="75">
+                            <span class="chart-value">75%</span>
+                        </div>
+                        <h5>SQL</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion de proyectos -->
+    <section id="projects" class="projects-section section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h6 class="section-subtitle">04 / Ideas llevadas a la realidad</h6>
+                <h2 class="section-title">Menos palabras.<br>Más <span class="text-primary">proyectos.</span></h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="section-description mt-3">Explora mi trabajo, descubre el stack y conoce qué hay detrás de cada solución.</p>
+            </div>
+
+            <!-- Filtros de Proyectos -->
+            <div class="project-filters" data-aos="fade-up">
+                <div class="filter-buttons" role="group" aria-label="Filtrar proyectos por categoría">
+                    <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">Todos <span>03</span></button>
+                    <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+                    <button type="button" class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile</button>
+                    <button type="button" class="filter-btn" data-filter="fullstack" aria-pressed="false">Full Stack</button>
+                    <button type="button" class="filter-btn" data-filter="design" aria-pressed="false">Diseño</button>
+                </div>
+                <label class="project-search"><i class="fas fa-magnifying-glass" aria-hidden="true"></i><span class="visually-hidden">Buscar proyecto o tecnología</span><input id="projectSearch" type="search" placeholder="Buscar proyecto o tecnología…" autocomplete="off"></label>
+            </div>
+            <p class="project-results" id="projectResults" role="status">3 proyectos seleccionados</p>
+
+            <!-- Grid de Proyectos -->
+            <div class="row g-4 project-grid">
+                <!-- Proyecto 1 -->
+                <div class="col-md-6 col-lg-4" data-category="fullstack web" data-project="ecommerce" data-aos="fade-up">
+                    <div class="project-card">
+                        <button type="button" class="project-preview preview-commerce" data-project-open="ecommerce" aria-label="Ver detalles de Plataforma E-commerce" aria-haspopup="dialog">
+                            <span class="preview-index">01 / E-COMMERCE</span>
+                            <span class="mock-browser" aria-hidden="true"><span class="mock-toolbar"><span>● ● ●</span> shop / colección</span><span class="mock-shop-title">Tu próximo<br><b>favorito.</b></span><span class="mock-products"><span><i class="fas fa-headphones"></i><small>Audio</small></span><span><i class="fas fa-clock"></i><small>Accesorios</small></span><span><i class="fas fa-camera"></i><small>Tech</small></span></span></span>
+                            <span class="preview-open"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="project-content">
+                            <div class="project-category">Full Stack</div>
+                            <h4 class="project-title">Plataforma E-commerce</h4>
+                            <p class="project-description">Tienda online completa con carrito de compras, pasarela de
+                                pagos y panel de administración.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                            <button type="button" class="project-detail-link" data-project-open="ecommerce" aria-haspopup="dialog">Explorar proyecto <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="col-md-6 col-lg-4" data-category="mobile" data-project="fitness" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <button type="button" class="project-preview preview-fitness" data-project-open="fitness" aria-label="Ver detalles de App Fitness" aria-haspopup="dialog">
+                            <span class="preview-index">02 / MOBILE APP</span>
+                            <span class="mock-phone" aria-hidden="true"><span class="phone-notch"></span><span class="phone-heading">Hazlo por ti<span>Tu actividad de hoy</span></span><span class="fitness-ring"><i class="fas fa-bolt"></i><b>75<small>%</small></b></span><span class="phone-bottom"><span><i class="fas fa-fire"></i> Energía</span><span><i class="fas fa-heart-pulse"></i> Progreso</span></span></span>
+                            <span class="fitness-float" aria-hidden="true"><i class="fas fa-check"></i> Un paso más cerca</span>
+                            <span class="preview-open"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="project-content">
+                            <div class="project-category">Mobile</div>
+                            <h4 class="project-title">App Fitness</h4>
+                            <p class="project-description">Aplicación móvil para seguimiento de ejercicios, nutrición y
+                                progreso físico.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">Chart.js</span>
+                            </div>
+                            <button type="button" class="project-detail-link" data-project-open="fitness" aria-haspopup="dialog">Explorar proyecto <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="col-md-6 col-lg-4" data-category="web design" data-project="dashboard" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <button type="button" class="project-preview preview-dashboard" data-project-open="dashboard" aria-label="Ver detalles de Dashboard Analítico" aria-haspopup="dialog">
+                            <span class="preview-index">03 / DATA & DESIGN</span>
+                            <span class="mock-browser mock-dashboard" aria-hidden="true"><span class="mock-toolbar"><span>● ● ●</span> analytics / overview</span><span class="dashboard-heading">Todo, en perspectiva.<i class="fas fa-chart-line"></i></span><span class="mock-metrics"><span>Datos<b>En tiempo real</b></span><span>Insights<b>En un solo lugar</b></span></span><span class="mock-bars"><i style="--bar:35%"></i><i style="--bar:58%"></i><i style="--bar:45%"></i><i style="--bar:72%"></i><i style="--bar:62%"></i><i style="--bar:88%"></i><i style="--bar:76%"></i><i style="--bar:100%"></i></span></span>
+                            <span class="preview-open"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="project-content">
+                            <div class="project-category">Web</div>
+                            <h4 class="project-title">Dashboard Analítico</h4>
+                            <p class="project-description">Panel de control con gráficos interactivos y análisis de
+                                datos en tiempo real.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">D3.js</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                            <button type="button" class="project-detail-link" data-project-open="dashboard" aria-haspopup="dialog">Explorar proyecto <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-empty" id="projectsEmpty" hidden><i class="fas fa-magnifying-glass" aria-hidden="true"></i><h3>No encontré ese proyecto</h3><p>Prueba con otra tecnología o explora todos los proyectos.</p><button class="btn btn-outline-primary" type="button" id="resetProjects">Restablecer filtros</button></div>
+            <section class="github-live" id="githubLive" aria-label="Repositorios recientes en GitHub" hidden></section>
+            <div class="projects-footer" data-aos="fade-up">
+                <span>Cada proyecto, una nueva oportunidad de crear.</span>
+                <a class="text-link" href="https://github.com/AyvarAntonio" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Más en GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Taller IDE en vivo -->
+    <section id="playground" class="playground-section section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h6 class="section-subtitle">Taller en vivo / Aprende haciendo</h6>
+                <h2 class="section-title">Escribe código.<br>Mira <span class="text-primary">cómo cobra vida.</span></h2>
+                <p class="section-description mt-3">Un mini editor con tres archivos, vista previa en tiempo real y retos que se comprueban solos. Supera los tres.</p>
+            </div>
+            <div class="ide" id="ide" data-aos="fade-up">
+                <div class="ide-burst" id="ideBurst" aria-hidden="true"></div>
+                <div class="ide-top">
+                    <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <div class="ide-tabs" role="tablist" aria-label="Archivos del proyecto">
+                        <button type="button" role="tab" data-file="html" aria-selected="true"><i class="fab fa-html5" aria-hidden="true"></i> index.html</button>
+                        <button type="button" role="tab" data-file="css" aria-selected="false"><i class="fab fa-css3-alt" aria-hidden="true"></i> style.css</button>
+                        <button type="button" role="tab" data-file="js" aria-selected="false"><i class="fab fa-js" aria-hidden="true"></i> script.js</button>
+                    </div>
+                    <div class="ide-actions">
+                        <button type="button" id="ideReset" aria-label="Restablecer el reto" title="Restablecer"><i class="fas fa-rotate-left" aria-hidden="true"></i></button>
+                        <button type="button" id="ideRun" class="ide-run"><i class="fas fa-play" aria-hidden="true"></i> Ejecutar</button>
+                    </div>
+                </div>
+                <div class="ide-body">
+                    <aside class="ide-side" aria-label="Retos">
+                        <div class="ide-progress"><span id="ideCount">0 / 3 retos</span><div><b id="ideProgress"></b></div></div>
+                        <div id="ideRetos" class="ide-retos"></div>
+                        <a class="text-link ide-finish" id="ideFinish" href="#contact" hidden>¡Completaste el taller! Hablemos</a>
+                    </aside>
+                    <div class="ide-main">
+                        <div class="ide-task"><p id="ideTask"></p><button type="button" id="ideHintBtn">Ver pista</button></div>
+                        <p class="ide-hint" id="ideHint" hidden></p>
+                        <div class="ide-code">
+                            <div class="ide-gutter" id="ideGutter" aria-hidden="true"></div>
+                            <div class="ide-edit">
+                                <pre id="ideHl" aria-hidden="true"></pre>
+                                <textarea id="ideCode" aria-label="Editor de código" spellcheck="false" autocapitalize="off" autocomplete="off" wrap="off"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ide-prev">
+                        <div class="ide-devices" role="group" aria-label="Tamaño de la vista previa">
+                            <span>VISTA PREVIA</span>
+                            <button type="button" data-device="desktop" aria-pressed="true"><i class="fas fa-desktop" aria-hidden="true"></i> Pantalla</button>
+                            <button type="button" data-device="mobile" aria-pressed="false"><i class="fas fa-mobile-screen" aria-hidden="true"></i> Móvil</button>
+                        </div>
+                        <div class="ide-stage" id="ideStage" data-device="desktop"><iframe id="ideFrame" class="ide-frame" title="Resultado del código" sandbox="allow-scripts"></iframe></div>
+                        <div class="ide-console" id="ideConsole" role="log" aria-label="Consola"></div>
+                    </div>
+                </div>
+                <div class="ide-bot">
+                    <div class="bot-avatar" aria-hidden="true"><i class="fas fa-robot"></i></div>
+                    <div class="bot-bubble"><strong>Ayvarcitoo · tu guía</strong><p id="ideBotText" aria-live="polite"></p></div>
+                    <div class="bot-actions">
+                        <button type="button" id="ideBotPrev">Atrás</button>
+                        <button type="button" id="ideBotAct" class="is-act">Hazlo por mí</button>
+                        <button type="button" id="ideBotNext" class="is-primary">Siguiente paso</button>
+                        <button type="button" id="ideTourBtn"><i class="fas fa-route" aria-hidden="true"></i> Tour</button>
+                    </div>
+                </div>
+                <div class="ide-statusbar"><span id="ideStatus" role="status" aria-live="polite">Listo</span><span><kbd>Ctrl</kbd> <kbd>Enter</kbd> ejecutar</span><span id="ideLang">HTML</span><span id="ideCursor">Ln 1, Col 1</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion de Educacion -->
+    <section id="education" class="education-section section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h6 class="section-subtitle">05 / Aprendizaje continuo</h6>
+                <h2 class="section-title">Siempre en<br>modo <span class="text-primary">aprendiz.</span></h2>
+                <div class="section-divider mx-auto"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="education-card">
+                        <div class="education-banner is-utp"><img src="img/logo-utp.png" alt="Logo de la Universidad Tecnológica del Perú (UTP)" width="480" height="104" loading="lazy" decoding="async"></div>
+                        <div class="education-header">
+                            <div class="education-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="education-info">
+                                <h4>Estudiante de Ingeniería de Software</h4>
+                                <p class="institution">Universidad Tecnológica del Perú (UTP)</p>
+                                <span class="education-date">03/2026 – Presente</span>
+                            </div>
+                        </div>
+                        <div class="education-body">
+                            <p>Formación en desarrollo de software, algoritmos, estructuras de datos, ingeniería de
+                                software y sistemas de información.</p>
+                            <div class="education-skills">
+                                <span class="skill-badge">Algoritmos</span>
+                                <span class="skill-badge">Estructuras de Datos</span>
+                                <span class="skill-badge">Ingeniería de Software</span>
+                                <span class="skill-badge">Bases de Datos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
+                    <div class="education-card">
+                        <div class="education-banner is-trentino"><img src="img/logo-trentino.png" alt="Logo del IESTP Trentino Juan Pablo II" width="340" height="187" loading="lazy" decoding="async"></div>
+                        <div class="education-header">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="education-info">
+                                <h4>Técnico en Computación e Informática</h4>
+                                <p class="institution">IESTP Trentino Juan Pablo II</p>
+                                <span class="education-date">01/2023 – 12/2025</span>
+                            </div>
+                        </div>
+                        <div class="education-body">
+                            <p>Titulado de la carrera Técnica en Computación e Informática, con especialización en
+                                sistemas y tecnologías de la información, desarrollo de aplicaciones y redes de
+                                computadoras.</p>
+                            <div class="education-skills">
+                                <span class="skill-badge">Programación</span>
+                                <span class="skill-badge">Redes</span>
+                                <span class="skill-badge">Sistemas Operativos</span>
+                                <span class="skill-badge">Desarrollo Web</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mis idiomas, falta Quechua xd-->
+            <div class="languages mt-5" data-aos="fade-up">
+                <h4 class="text-center mb-4">Idiomas</h4>
+                <div class="language-levels">
+                    <div class="language-level">
+                        <div class="language-info">
+                            <span class="language-name">Español</span>
+                            <span class="language-level-text">Nativo</span>
+                        </div>
+                        <div class="language-progress">
+                            <div class="progress-bar" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="language-level">
+                        <div class="language-info">
+                            <span class="language-name">Inglés</span>
+                            <span class="language-level-text">Intermedio Avanzado</span>
+                        </div>
+                        <div class="language-progress">
+                            <div class="progress-bar" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Seccion para contacto-->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h6 class="section-subtitle">06 / El siguiente paso</h6>
+                <h2 class="section-title">¿Creamos algo<br><span class="text-primary">extraordinario?</span><span class="contact-star" aria-hidden="true">✳</span></h2>
+                <div class="section-divider mx-auto"></div>
+                <p class="section-description mt-3">¿Tienes un proyecto en mente? ¡Hablemos sobre cómo puedo ayudarte!
+                </p>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="contact-info">
+                        <h3 class="mb-4">Información de Contacto</h3>
+                        <p class="mb-4">Estoy disponible para oportunidades laborales, proyectos freelance o simplemente
+                            para charlar sobre tecnología.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h5>Ubicación</h5>
+                                    <p>Pachacamac, Lima - Perú</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h5>Email</h5>
+                                    <p><a href="mailto:joseayvar28@gmail.com">joseayvar28@gmail.com</a></p>
+                                </div>
+                                <button type="button" class="icon-button copy-email" data-copy-email aria-label="Copiar correo electrónico" title="Copiar correo"><i class="far fa-copy" aria-hidden="true"></i></button>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h5>Teléfono</h5>
+                                    <p><a href="tel:+51946016559">+51 946 016 559</a></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h5>Disponibilidad</h5>
+                                    <p class="text-success">
+                                        <i class="fas fa-circle me-1"></i> Disponible para nuevos proyectos
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-social mt-4">
+                            <h5 class="mb-3">Sígueme en redes sociales</h5>
+                            <div class="social-icons">
+                                <a href="https://www.instagram.com/ayvxr_18/" target="_blank" class="social-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/jose-ayvar-82a980398" class="social-icon"
+                                    target="_blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com/AyvarAntonio" target="_blank" class="social-icon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.tiktok.com/@ayvxrcitooo" target="_blank" class="social-icon">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                                <a href="https://wa.me/51946016559?text=Hola%20Jose%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20contigo." target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                                <a href="mailto:joseayvar28@gmail.com" class="social-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
+                    <div class="contact-form-container">
+                        <div class="form-heading"><span class="section-subtitle">INICIEMOS UNA CONVERSACIÓN</span><span class="status-dot" aria-hidden="true"></span></div>
+                        <h3 class="mb-4">Cuéntame tu idea<span class="text-primary">.</span></h3>
+                        <div class="contact-topics" role="group" aria-label="Seleccionar asunto del mensaje"><button type="button" data-subject="Proyecto de desarrollo web" aria-pressed="false">Desarrollo web</button><button type="button" data-subject="Oportunidad laboral" aria-pressed="false">Oportunidad laboral</button><button type="button" data-subject="Propuesta de colaboración" aria-pressed="false">Colaboración</button></div>
+
+                        <form name="contacto" action="/" method="POST" id="contactForm" class="contact-form" data-netlify="true" netlify-honeypot="bot-field">
+                            <input type="hidden" name="form-name" value="contacto">
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Nombre completo *</label>
+                                        <input type="text" id="name" name="name" class="form-control" placeholder="¿Cómo te llamas?" autocomplete="name" maxlength="150" required>
+                                        <div class="form-feedback"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Correo electrónico *</label>
+                                        <input type="email" id="email" name="email" class="form-control" placeholder="tu@correo.com" autocomplete="email" maxlength="254" required>
+                                        <div class="form-feedback"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Asunto *</label>
+                                <input type="text" id="subject" name="subject" class="form-control" placeholder="¿Qué tienes en mente?" maxlength="200" required>
+                                <div class="form-feedback"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Mensaje *</label>
+                                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Háblame de tu proyecto, tus objetivos o cómo podemos colaborar…" minlength="10" maxlength="3000" aria-describedby="messageCount" required></textarea>
+                                <span class="message-count" id="messageCount">0 / 3000</span>
+                                <div class="form-feedback"></div>
+                            </div>
+
+                            <!-- Campo honeypot para spam -->
+                            <input type="text" name="bot-field" style="display: none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                            <div class="form-group mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <span class="submit-text">
+                                        <i class="fas fa-paper-plane me-2"></i> Enviar mensaje
+                                    </span>
+                                    <span class="spinner-border spinner-border-sm d-none" role="status"></span>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="form-alert" id="formStatus" role="status" hidden></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    <!-- El Footer -->
+    <footer class="footer bg-dark text-white">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="footer-brand mb-3">
+                        <h3 class="logo-text">Jose Ayvar</h3>
+                        <p class="footer-description">Ingeniero de Software Jr & Desarrollador Full Stack</p>
+                    </div>
+                    <p class="mb-0">Creando soluciones digitales innovadoras para el futuro.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer-social text-lg-end">
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/ayvxr_18/" target="_blank" class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/jose-ayvar-82a980398" class="social-icon"
+                                target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="https://github.com/AyvarAntonio" target="_blank" class="social-icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@ayvxrcitooo" target="_blank" class="social-icon">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://wa.me/51946016559?text=Hola%20Jose%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20contigo." target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp" title="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                                <a href="mailto:joseayvar28@gmail.com" class="social-icon">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                        <p class="mt-3">joseayvar28@gmail.com | +51 946 016 559</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 opacity-25">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">
+                        © <span id="currentYear">2026</span> <span class="text-primary">Jose Ayvar</span>. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        Hecho con intención <span class="text-primary">&lt;/&gt;</span> y mucho código.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Boton para volver a casita -->
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Volver al inicio">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </a>
+
+    <div class="experience-controls" aria-label="Personalizar apariencia">
+        <span class="controls-label">TU ESTILO</span>
+        <div class="accent-options" role="group" aria-label="Color de acento">
+            <button type="button" class="accent-option" data-set-accent="lime" aria-label="Neón lima" aria-pressed="true" title="Neón lima"><span style="--swatch:#c4f568"></span></button>
+            <button type="button" class="accent-option" data-set-accent="cyan" aria-label="Neón cian" aria-pressed="false" title="Neón cian"><span style="--swatch:#65e4f4"></span></button>
+            <button type="button" class="accent-option" data-set-accent="violet" aria-label="Neón violeta" aria-pressed="false" title="Neón violeta"><span style="--swatch:#b79aff"></span></button>
+        </div>
+        <span class="control-divider" aria-hidden="true"></span>
+        <button type="button" class="icon-button" id="motionToggle" aria-label="Pausar animaciones" aria-pressed="false" title="Pausar animaciones"><i class="fas fa-pause" aria-hidden="true"></i></button>
+        <button type="button" class="icon-button" data-open-command aria-label="Abrir navegación rápida" aria-haspopup="dialog" title="Navegación rápida · Ctrl K"><i class="fas fa-terminal" aria-hidden="true"></i></button>
+    <button type="button" class="icon-button" id="installApp" aria-label="Instalar app" title="Instalar app"><i class="fas fa-download" aria-hidden="true"></i></button>
+    </div>
+
+    <dialog class="command-dialog" id="commandDialog" aria-labelledby="commandTitle">
+        <div class="dialog-heading"><h2 id="commandTitle"><i class="fas fa-terminal" aria-hidden="true"></i> ¿A dónde vamos?</h2><button type="button" class="icon-button" data-close-dialog aria-label="Cerrar navegación rápida"><i class="fas fa-xmark" aria-hidden="true"></i></button></div>
+        <label class="command-search"><i class="fas fa-magnifying-glass" aria-hidden="true"></i><span class="visually-hidden">Buscar sección, proyecto o acción</span><input id="commandSearch" type="search" placeholder="Busca una sección, proyecto o acción…" autocomplete="off" aria-controls="commandResults"></label>
+        <div id="commandResults" class="command-results" aria-label="Acciones disponibles"></div>
+        <p id="commandStatus" class="visually-hidden" role="status"></p>
+        <div class="command-footer"><span><kbd>↑</kbd><kbd>↓</kbd> navegar <kbd>↵</kbd> abrir</span><span><kbd>esc</kbd> cerrar</span></div>
+    </dialog>
+
+    <dialog class="project-dialog" id="projectDialog" aria-labelledby="projectDialogTitle">
+        <div class="dialog-heading"><span class="section-subtitle">DETRÁS DEL PROYECTO</span><button type="button" class="icon-button" data-close-dialog aria-label="Cerrar detalles del proyecto"><i class="fas fa-xmark" aria-hidden="true"></i></button></div>
+        <div class="detail-preview" id="projectDialogPreview" aria-hidden="true"></div>
+        <div class="project-dialog-body"><span class="project-category" id="projectDialogCategory"></span><h2 id="projectDialogTitle"></h2><p id="projectDialogDescription"></p><h3>Qué hay detrás</h3><ul class="project-features" id="projectDialogFeatures"></ul><h3>Stack tecnológico</h3><div class="project-technologies" id="projectDialogTechnologies"></div><p class="preview-caption">Ilustración conceptual del proyecto. Consulta conmigo la disponibilidad de la demo y el código.</p><div class="dialog-actions"><a class="btn btn-primary" href="#contact" id="projectContact">Hablemos de este proyecto <i class="fas fa-arrow-right" aria-hidden="true"></i></a><a class="text-link" href="https://github.com/AyvarAntonio" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Perfil de GitHub</a></div></div>
+    </dialog>
+
+    <div class="toast-region" id="toastRegion" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- mi script js xd -->
+    <script src="js/script.js"></script>
+    <script src="js/enhancements.js"></script>
+    <script src="js/extras.js"></script>
+    <script src="js/ayvarcitoo.js"></script>
+</body>
+
+</html>

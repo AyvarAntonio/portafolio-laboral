@@ -1,0 +1,27 @@
+/* Mejoras aditivas del portafolio */
+.boot { position: fixed; inset: 0; z-index: 3000; display: grid; place-content: center; background: var(--bg); color: var(--primary-color); font: 12px/2.1 var(--mono); transition: opacity .45s; cursor: pointer; padding: 24px; }
+.boot pre { margin: 0; font: inherit; white-space: pre-wrap; }
+.boot pre::after { content: '▌'; animation: blink 1s step-end infinite; }
+.boot span { display: block; margin-top: 14px; color: var(--muted); font-size: 9px; }
+.boot.is-done { opacity: 0; pointer-events: none; }
+
+.rail { position: fixed; right: 18px; top: 50%; translate: 0 -50%; z-index: 800; display: none; flex-direction: column; gap: 4px; }
+.rail a { position: relative; display: block; width: 28px; height: 22px; }
+.rail a::before { content: ''; position: absolute; right: 8px; top: 50%; width: 6px; height: 6px; margin-top: -3px; border-radius: 50%; background: var(--border); border: 1px solid var(--muted); transition: background .25s, transform .25s, box-shadow .25s; }
+.rail a span { position: absolute; right: 30px; top: 50%; translate: 8px -50%; padding: 4px 9px; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); color: var(--text); font: 9px var(--mono); white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .2s, translate .2s; }
+.rail a:hover span, .rail a:focus-visible span { opacity: 1; translate: 0 -50%; }
+.rail a.is-on::before { background: var(--accent); border-color: var(--accent); transform: scale(1.5); box-shadow: 0 0 12px var(--glow); }
+@media (min-width: 1400px) { .rail { display: flex; } }
+
+.project-card:hover { transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-5px); }
+
+.github-live { margin-top: 34px; padding: 22px; border: 1px solid var(--border); border-radius: var(--radius); background: linear-gradient(120deg, var(--accent-soft), transparent 45%), var(--surface); }
+.gh-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; font: 9px var(--mono); letter-spacing: 1.2px; color: var(--muted); }
+.gh-head > span { display: flex; align-items: center; gap: 9px; }
+.gh-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.gh-repo { display: flex; flex-direction: column; gap: 6px; padding: 16px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg); min-width: 0; }
+.gh-repo strong { font: 500 14px var(--heading); overflow-wrap: anywhere; }
+.gh-repo span { color: var(--muted); font-size: 11px; line-height: 1.6; }
+.gh-repo small { margin-top: auto; padding-top: 6px; color: var(--primary-color); font: 9px var(--mono); }
+.gh-repo:hover { border-color: var(--primary-color); background: var(--accent-soft); transform: translateY(-3px); }
+@media (max-width: 767.98px) { .gh-list { grid-template-columns: 1fr; } .github-live { padding: 18px; } }

@@ -1,0 +1,20 @@
+{
+  "name": "Jose Ayvar | Ingeniero de Software Jr",
+  "short_name": "Jose Ayvar",
+  "description": "Portafolio profesional de Jose Ayvar: desarrollo Full Stack y docencia en tecnología.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#080a0b",
+  "theme_color": "#080a0b",
+  "icons": [
+    { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Contacto", "url": "/#contact" },
+    { "name": "Taller en vivo", "url": "/#playground" }
+  ]
+}
