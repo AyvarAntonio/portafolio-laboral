@@ -13,7 +13,7 @@
     const WA = 'https://wa.me/51946016559?text=Hola%20Jose%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20contigo.';
     const A = {
         wa: { label: 'WhatsApp', href: WA }, mail: { label: 'Correo', href: 'mailto:joseayvar28@gmail.com' },
-        gh: { label: 'GitHub', href: 'https://github.com/AyvarAntonio' }, li: { label: 'LinkedIn', href: 'https://www.linkedin.com/in/jose-ayvar-82a980398' },
+        gh: { label: 'GitHub', href: 'https://github.com/Ayvxrrr' }, li: { label: 'LinkedIn', href: 'https://www.linkedin.com/in/jose-ayvar-82a980398' },
         cv: { label: 'Descargar CV', href: 'docs/CV-Jose-Ayvar.pdf', download: true },
         go: (label, id) => ({ label, go: id })
     };

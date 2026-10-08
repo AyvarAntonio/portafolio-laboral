@@ -116,12 +116,12 @@
     // Si GitHub no responde, dejo este bloque oculto.
     const gh = $('#githubLive');
     if (gh && 'fetch' in window) {
-        fetch('https://api.github.com/users/AyvarAntonio/repos?sort=updated&per_page=6', { headers: { Accept: 'application/vnd.github+json' } })
+        fetch('https://api.github.com/users/Ayvxrrr/repos?sort=updated&per_page=6', { headers: { Accept: 'application/vnd.github+json' } })
             .then(r => { if (!r.ok) throw new Error(); return r.json(); })
             .then(repos => {
                 const list = repos.filter(r => !r.fork).slice(0, 3);
                 if (!list.length) return;
-                gh.innerHTML = '<div class="gh-head"><span><span class="status-dot" aria-hidden="true"></span> GITHUB EN VIVO</span><a class="text-link" href="https://github.com/AyvarAntonio" target="_blank" rel="noopener noreferrer">@AyvarAntonio</a></div><div class="gh-list">' +
+                gh.innerHTML = '<div class="gh-head"><span><span class="status-dot" aria-hidden="true"></span> GITHUB EN VIVO</span><a class="text-link" href="https://github.com/Ayvxrrr" target="_blank" rel="noopener noreferrer">@Ayvxrrr</a></div><div class="gh-list">' +
                     list.map(r => `<a class="gh-repo" href="${esc(r.html_url)}" target="_blank" rel="noopener noreferrer"><strong>${esc(r.name)}</strong><span>${esc(r.description || 'Repositorio público')}</span><small>${esc(r.language || 'Código')} · ★ ${r.stargazers_count}</small></a>`).join('') + '</div>';
                 gh.hidden = false;
             })

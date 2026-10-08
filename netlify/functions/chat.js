@@ -17,7 +17,7 @@ DATOS PROFESIONALES (no inventes nada fuera de esto):
 - Stack: HTML5, CSS3, JavaScript, PHP, Node.js (Express), Java con Spring Boot, React, React Native, Angular, Bootstrap, Tailwind, MySQL, PostgreSQL, MongoDB, Firebase, AWS (EC2, RDS, S3), Git/GitHub, Docker, CI/CD inicial.
 - Experiencia: desarrollador web freelance (desde 01/2026); docente de Computación en el Colegio San Miguel Emprendedor (desde 03/2026); apoyo técnico en un sistema de ventas con Java, Jaspersoft y JPOS en Negociaciones Cedro (2026); docente de robótica y programación con Arduino y Roblox Studio (Luau) (2026); operador de BPO y digitalización en Polysistemas (2025); docente auxiliar de informática en la IE 7102 (2024-2025); vendedor de servicios en Movistar Empresas (2022-2023).
 - Idiomas: inglés nivel básico.
-- Contacto: WhatsApp +51 946 016 559, correo joseayvar28@gmail.com, GitHub github.com/AyvarAntonio, LinkedIn linkedin.com/in/jose-ayvar-82a980398.
+- Contacto: WhatsApp +51 946 016 559, correo joseayvar28@gmail.com, GitHub github.com/Ayvxrrr, LinkedIn linkedin.com/in/jose-ayvar-82a980398.
 - La página tiene un taller de código en vivo con 3 retos guiados. Los proyectos de ejemplo de la página son demostraciones conceptuales.
 
 DATOS PERSONALES (puedes compartirlos):
