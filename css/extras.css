@@ -113,9 +113,11 @@
 @keyframes tour-pulse { 50% { box-shadow: 0 0 0 6px var(--accent-soft); border-color: var(--accent); } }
 @media (max-width: 767.98px) { .ide-bot { flex-wrap: wrap; } .bot-bubble { flex-basis: calc(100% - 64px); } .bot-actions { justify-content: flex-start; width: 100%; } }
 
-.tour { position: fixed; inset: 0; z-index: 2500; }
-.tour-hole { position: fixed; border-radius: 12px; border: 2px solid var(--accent); box-shadow: 0 0 0 100vmax #040808c4, 0 0 30px var(--glow); transition: top .4s var(--ease), left .4s var(--ease), width .4s var(--ease), height .4s var(--ease); pointer-events: none; }
-.tour-pop { position: fixed; width: min(340px, calc(100vw - 20px)); padding: 18px; border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); border-radius: 12px; background: #131819; color: #e9efe7; box-shadow: 0 20px 60px #000a; transition: top .4s var(--ease), left .4s var(--ease); }
+html.has-tour { overflow: hidden; overscroll-behavior: none; scrollbar-gutter: stable; }
+html.has-tour body { overflow: hidden; overscroll-behavior: none; }
+.tour { position: fixed; inset: 0; z-index: 2500; overscroll-behavior: none; }
+.tour-hole { position: fixed; border-radius: 12px; border: 2px solid var(--accent); box-shadow: 0 0 0 100vmax #040808c4, 0 0 30px var(--glow); pointer-events: none; }
+.tour-pop { position: fixed; width: min(340px, calc(100vw - 20px)); max-height: calc(100dvh - 20px); overflow-y: auto; overscroll-behavior: contain; padding: 18px; border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); border-radius: 12px; background: #131819; color: #e9efe7; box-shadow: 0 20px 60px #000a; }
 .tour-pop p { margin: 0 0 16px; font-size: 13px; line-height: 1.7; }
 .tour-nav { display: flex; align-items: center; gap: 6px; }
 .tour-count { flex: 1; font: 10px var(--mono); color: #7f8c83; }

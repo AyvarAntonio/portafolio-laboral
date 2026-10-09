@@ -256,7 +256,7 @@
         ['#ideRetos', 'Estos son los retos. Se marcan solos cuando lo logras.'],
         ['.ide-bot', 'Y aquí estaré yo, explicándote cada paso. ¡Empecemos!']
     ];
-    let tour = null, ti = 0;
+    let tour = null, ti = 0, tourFrame = 0, tourBackground = [];
     const tourBtn = $('#ideTourBtn');
     try { if (!localStorage.getItem('portfolio.tour')) tourBtn.classList.add('is-new'); } catch { /* sin guardado */ }
     function tourPlace() {
@@ -269,36 +269,71 @@
         pop.style.top = `${Math.min(Math.max(10, top), innerHeight - ph - 10)}px`;
         pop.style.left = `${Math.min(Math.max(10, r.left + r.width / 2 - pw / 2), innerWidth - pw - 10)}px`;
     }
+    function tourTrack() {
+        cancelAnimationFrame(tourFrame);
+        tourFrame = requestAnimationFrame(tourPlace);
+    }
+    function tourCenter() {
+        if (!tour) return;
+        $(tourSteps[ti][0]).scrollIntoView({ block: 'center', behavior: full() ? 'smooth' : 'instant' });
+        tourPlace();
+        tourTrack();
+    }
+    function tourBlockScroll(e) {
+        // El texto del recuadro puede desplazarse si no cabe en una pantalla pequeña.
+        const pop = $('.tour-pop', tour);
+        if (pop.contains(e.target) && pop.scrollHeight > pop.clientHeight) return;
+        if (e.cancelable) e.preventDefault();
+    }
     function tourShow() {
-        const [sel, text] = tourSteps[ti];
-        $(sel).scrollIntoView({ block: 'center', behavior: full() ? 'smooth' : 'auto' });
+        const [, text] = tourSteps[ti];
         $('.tour-pop p', tour).textContent = text;
+        $('.tour-pop', tour).scrollTop = 0;
         $('.tour-count', tour).textContent = `${ti + 1} / ${tourSteps.length}`;
         $('[data-tour="prev"]', tour).disabled = ti === 0;
         $('[data-tour="next"]', tour).textContent = ti === tourSteps.length - 1 ? 'Empezar' : 'Siguiente';
-        setTimeout(tourPlace, full() ? 500 : 30);
+        tourCenter();
         $('[data-tour="next"]', tour).focus({ preventScroll: true });
     }
     function endTour() {
         if (!tour) return;
+        cancelAnimationFrame(tourFrame);
         tour.remove(); tour = null;
-        document.removeEventListener('keydown', tourKeys);
-        removeEventListener('resize', tourPlace);
+        root.classList.remove('has-tour');
+        tourBackground.forEach(el => { el.inert = false; });
+        tourBackground = [];
+        document.removeEventListener('keydown', tourKeys, true);
+        document.removeEventListener('wheel', tourBlockScroll, true);
+        document.removeEventListener('touchmove', tourBlockScroll, true);
+        removeEventListener('scroll', tourTrack);
+        removeEventListener('resize', tourCenter);
         tourBtn.classList.remove('is-new');
         try { localStorage.setItem('portfolio.tour', '1'); } catch { /* sin guardado */ }
         tourBtn.focus({ preventScroll: true });
     }
     function tourKeys(e) {
-        if (e.key === 'Escape') endTour();
-        else if (e.key === 'ArrowRight') $('[data-tour="next"]', tour).click();
-        else if (e.key === 'ArrowLeft') $('[data-tour="prev"]', tour).click();
+        e.stopPropagation();
+        if (e.key === 'Escape') { e.preventDefault(); endTour(); }
+        else if (e.key === 'ArrowRight') { e.preventDefault(); $('[data-tour="next"]', tour).click(); }
+        else if (e.key === 'ArrowLeft') { e.preventDefault(); $('[data-tour="prev"]', tour).click(); }
+        else if (e.key === 'Tab') {
+            const buttons = $$('button:not(:disabled)', tour);
+            const at = buttons.indexOf(document.activeElement);
+            e.preventDefault();
+            buttons[(at + (e.shiftKey ? -1 : 1) + buttons.length) % buttons.length].focus({ preventScroll: true });
+        } else if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End'].includes(e.key)) {
+            e.preventDefault();
+        } else if (e.key === ' ' && !e.target.matches('button')) e.preventDefault();
     }
     tourBtn.addEventListener('click', () => {
         if (tour) return;
         tour = document.createElement('div');
         tour.className = 'tour';
-        tour.innerHTML = '<div class="tour-hole"></div><div class="tour-pop" role="dialog" aria-label="Tour guiado del taller"><p></p><div class="tour-nav"><span class="tour-count"></span><button type="button" data-tour="skip">Salir</button><button type="button" data-tour="prev">Atrás</button><button type="button" data-tour="next" class="is-primary">Siguiente</button></div></div>';
+        tour.innerHTML = '<div class="tour-hole"></div><div class="tour-pop" role="dialog" aria-modal="true" aria-label="Tour guiado del taller"><p></p><div class="tour-nav"><span class="tour-count"></span><button type="button" data-tour="skip">Salir</button><button type="button" data-tour="prev">Atrás</button><button type="button" data-tour="next" class="is-primary">Siguiente</button></div></div>';
         document.body.append(tour);
+        root.classList.add('has-tour');
+        tourBackground = [...document.body.children].filter(el => el !== tour && !el.inert);
+        tourBackground.forEach(el => { el.inert = true; });
         ti = 0;
         tour.addEventListener('click', e => {
             const a = e.target.closest('[data-tour]')?.dataset.tour;
@@ -306,8 +341,11 @@
             else if (a === 'prev' && ti > 0) { ti--; tourShow(); }
             else if (a === 'next') { if (ti < tourSteps.length - 1) { ti++; tourShow(); } else endTour(); }
         });
-        document.addEventListener('keydown', tourKeys);
-        addEventListener('resize', tourPlace);
+        document.addEventListener('keydown', tourKeys, true);
+        document.addEventListener('wheel', tourBlockScroll, { passive: false, capture: true });
+        document.addEventListener('touchmove', tourBlockScroll, { passive: false, capture: true });
+        addEventListener('scroll', tourTrack, { passive: true });
+        addEventListener('resize', tourCenter);
         tourShow();
     });
     load();
